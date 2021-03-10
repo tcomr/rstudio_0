@@ -1,3 +1,8 @@
-# R projects
+# rstudio_test
+testing github for r studio 
 
-testing gitnub for r studio 
+Cheking the readme folder from Rsudio pannel 
+uvu
+
+
+
