@@ -80,4 +80,60 @@ d_mat # if only one arguement in dimnames, it is rownames
 # modulus %%; 
 5%%3 # 2
 
+##================factor====================
+
+# gender vector
+gender <- c("Male", "Female", "Female", "Male", "Male")
+
+# Convert  to a factor
+factor_vector <-factor(gender)
+
+# Print out factor_sex_vector
+factor_vector
+
+mode(factor_vector) # numeric
+mode(gender) # character 
+typeof(factor_vector) # integer 
+typeof(gender) # character 
+
+# Animals
+animals <- c("Elephant", "Giraffe", "Donkey", "Horse")
+factor_animals <- factor(animals)
+factor_animals
+
+# Temp
+temp <- c("High", "Low", "High","Low", "Medium")
+temp_fac <- factor(temp, order = TRUE, levels = c("Low", "Medium", "High"))
+temp_fac
+
+# levels 
+sex_vec <- c("M", "F", "F", "M", "M")
+factor_sex <- factor(sex_vec)
+
+# Specify the levels of factor_survey_vector
+levels(factor_sex) <- c("Female", "Male")
+
+factor_sex
+
+summary(factor_sex)
+summary(sex_vec)
+
+# Create factor_speed_vector
+vec <- c("medium", "slow", "slow", "medium", "fast")
+factor_vec <- factor(vec, ordered = TRUE, 
+                     levels = c("slow", "medium", "fast"))
+
+# Factor value for second data analyst
+da4 <- vec[4]
+da4
+# Factor value for fifth data analyst
+da5 <- vec[5]
+da5
+# Is data analyst 2 faster than data analyst 5?
+da4 > da5
+
+
+
+
+
 
