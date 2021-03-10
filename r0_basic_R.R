@@ -1,4 +1,7 @@
 
+# Source:
+# https://campus.datacamp.com/courses/free-introduction-to-r
+
 my_vec <- c(140, -50, 20, -120, 240)
 
 her_vec <- c(-24, -50, 100, -350, 10)
@@ -169,8 +172,38 @@ x <- c(234, 32, 33, 56, 678)
 order_x <- order(x)
 x[order_x] # prints elements in order 
 
+# order() to create positions
+positions <-  order(df$diameter)
+positions # gives 1 4 2 3 8 7 6 5
 
+# Use positions to sort planets_df
+planets_df[positions, ] #sorted data on column diameter 
 
+# =========================list===========================
 
+# Lists: kind of super data type. List can include different kinds of data objects
+# such as: list, vector, logical, numeric, dataframe 
 
+lst0 <- 1:8
+lst0
+
+lst1 <- list(1:9)
+lst1
+
+lst2 <- list(list(1:9), matrix(1:12, nrow = 3))
+lst2
+
+lst3 <- list(1:9, matrix(1:12, nrow = 3), mtcars[, 3])
+lst3
+# names 
+names(lst3) <- c('seq of 9', 'matrix with 12', 'df of cars')
+length(lst2)
+lst2
+lst3
+
+lst3[3]
+lst3[[3]][[1]] # nested list use double [[]] to access data 
+lst0[1]
+
+mean(lst0)
 
