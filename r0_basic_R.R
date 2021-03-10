@@ -134,6 +134,43 @@ da4 > da5
 
 
 
+# ========================data.frame=============
+
+# head(df), str(df), 
+
+# Definition of vectors
+name <- c("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune")
+type <- c("Terrestrial planet", "Terrestrial planet", "Terrestrial planet", 
+          "Terrestrial planet", "Gas giant", "Gas giant", "Gas giant", "Gas giant")
+diameter <- c(0.382, 0.949, 1, 0.532, 11.209, 9.449, 4.007, 3.883)
+rotation <- c(58.64, -243.02, 1, 1.03, 0.41, 0.43, -0.72, 0.67)
+rings <- c(FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE)
+
+# Create a data frame from the vectors
+df <- data.frame(name, type, diameter, rotation, rings)
+df
+str(df)
+df[5,2]
+df[4, ]
+df[, 3]
+df[2:7, 'rings']
+
+
+df$ rotation
+ring <- df$rings
+ring
+df[ring, ]
+
+# subset 
+subset(df, rotation > .5 ) # only with rotation > than one half 
+
+# order gives index of order 
+x <- c(234, 32, 33, 56, 678)
+order_x <- order(x)
+x[order_x] # prints elements in order 
+
+
+
 
 
 
